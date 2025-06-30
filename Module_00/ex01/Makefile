@@ -6,7 +6,7 @@
 #    By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 01:28:52 by gribeiro          #+#    #+#              #
-#    Updated: 2025/06/28 19:21:46 by gribeiro         ###   ########.fr        #
+#    Updated: 2025/06/30 01:44:58 by gribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 #	Files
-SRC			= phonebook.cpp
+SRC			= $(addprefix src/, main.cpp phonebook.cpp contact.cpp)
+
 OBJ			= $(SRC:.cpp=.o)
 
 #	Rules
