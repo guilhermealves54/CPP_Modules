@@ -6,11 +6,18 @@
 /*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 00:38:16 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/06/30 01:37:43 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/01 00:11:58 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <../header/phonebook.hpp>
+#include "../header/phonebook.hpp"
+
+Contact::Contact(void)
+{
+	clear_contact();
+}
+Contact::~Contact(void)
+{}
 
 void	Contact::fill_contact(void)
 {
@@ -46,7 +53,6 @@ void	Contact::fill_nickname()
 {
 	std::cout << "Nickname > ";
 	std::getline(std:: cin, nickname);
-	//	Parse input
 }
 
 void	Contact::fill_phone_nbr()
@@ -60,27 +66,35 @@ void	Contact::fill_dark_secrt()
 {
 	std::cout << "Darkest secret > ";
 	std::getline(std:: cin, dark_secrt);
-	//	Parse input
 }
 
 void	Contact::print_full_data(void)
 {
 	if (filled == 1)
 	{
-		std::cout 	<< "\n"
-					<< "First name:     " << first_name << "\n"
-					<< "Last name:      " << last_name << "\n"
-					<< "Nickname:       " << nickname << "\n"
-					<< "Phone number:   " << phone_nbr << "\n"
-					<< "Darkest secret: " << dark_secrt << "\n";
+		std::cout
+			<< "First name:     " << first_name << "\n"
+			<< "Last name:      " << last_name << "\n"
+			<< "Nickname:       " << nickname << "\n"
+			<< "Phone number:   " << phone_nbr << "\n"
+			<< "Darkest secret: " << dark_secrt << "\n";
 	}
+}
+
+std::string	Contact::format_str(std::string str)
+{
+	if (str.length() > 10)
+		return (str.substr(0, 9) + ".");
+	return (str);
 }
 
 void	Contact::print_search(void)
 {
-	//	Index, first name, last name, nickname
-	//	10 Chars MAX (last char '.')!! Pipe dividing columns
-	//	RIGHT ALIGNED
+	std::cout
+		<< " | " << std::setw(10) << std::right << id << " | "
+		<< std::setw(10) << format_str(first_name) << " | "
+		<< std::setw(10) << format_str(last_name) << " | "
+		<< std::setw(10) << format_str(nickname) << " | \n";
 }
 
 void	Contact::clear_contact(void)
