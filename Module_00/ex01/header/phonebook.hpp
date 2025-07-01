@@ -30,6 +30,8 @@ class	Contact
 		void		fill_phone_nbr(void);
 		void		fill_dark_secrt(void);
 		std::string	format_str(std::string str);
+		int			valid_name(std::string str);
+		int			valid_phone(std::string str);
 		void		clear_contact();
 };
 

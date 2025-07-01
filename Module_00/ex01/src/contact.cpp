@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 00:38:16 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 00:11:58 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/01 13:25:04 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,34 @@ void	Contact::fill_contact(void)
 	filled = 1;
 }
 
+int	Contact::valid_name(std::string str)
+{
+	for (size_t i = 0; i < str.length(); i++)
+		if (!std::isalpha(str[i]))
+			return (-1);
+	return (0);
+}
+
 void	Contact::fill_first_name()
 {
 	std::cout << "First name > ";
 	std::getline(std:: cin, first_name);
-	//	Parse input
+	if (valid_name(first_name) == -1)
+	{
+		std::cout << first_name << " : is not a valid first name\n";
+		first_name = "";
+	}
 }
 
 void	Contact::fill_last_name()
 {
 	std::cout << "Last name > ";
 	std::getline(std:: cin, last_name);
-	//	Parse input
+	if (valid_name(last_name) == -1)
+	{
+		std::cout << first_name << " : is not a valid last name\n";
+		first_name = "";
+	}
 }
 
 void	Contact::fill_nickname()
@@ -55,11 +71,24 @@ void	Contact::fill_nickname()
 	std::getline(std:: cin, nickname);
 }
 
+int	Contact::valid_phone(std::string str)
+{
+	for (size_t i = 0; i < str.length(); i++)
+		if (!std::isdigit(str[i]) && str[i] != '(' && str[i] != ')' 
+			&& str[i] != '+')
+			return (-1);
+	return (0);
+}
+
 void	Contact::fill_phone_nbr()
 {
 	std::cout << "Phone number > ";
 	std::getline(std:: cin, phone_nbr);
-	//	Parse input
+	if (valid_phone(phone_nbr) == -1)
+	{
+		std::cout << phone_nbr << " : is not a valid phone number\n";
+		phone_nbr = "";
+	}
 }
 
 void	Contact::fill_dark_secrt()
