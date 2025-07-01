@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 15:51:05 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 18:47:04 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/01 19:11:44 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 
 #include <iostream>
 
-class	Zombie
+class Zombie
 {
-	private:
-		std::string	zombie_name;
+    private:
+        std::string zombie_name;
 
-	public:
-		Zombie();
-		~Zombie();
+    public:
+        Zombie();
+        ~Zombie();
 
-		void		announce();
-		std::string	set_name();
+        void    announce();
+        void	set_name(std::string name);
 };
 
 #endif

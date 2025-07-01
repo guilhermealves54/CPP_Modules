@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 15:51:05 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 18:47:04 by gribeiro         ###   ########.fr       */
+/*   Created: 2025/07/01 15:50:40 by gribeiro          #+#    #+#             */
+/*   Updated: 2025/07/01 19:11:56 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "../header/zombie.hpp"
 
-#include <iostream>
-
-class	Zombie
+Zombie::Zombie()
 {
-	private:
-		std::string	zombie_name;
+}
 
-	public:
-		Zombie();
-		~Zombie();
+Zombie::~Zombie()
+{
+	std::cout << zombie_name << " died.\n";
+}
 
-		void		announce();
-		std::string	set_name();
-};
+void	Zombie::announce(void)
+{
+	std::cout << zombie_name << ": BraiiiiiiinnnzzzZ...\n";
+}
 
-#endif
+void	Zombie::set_name(std::string name)
+{
+	static int	n;
+
+	zombie_name = name + std::to_string(n++);
+}
