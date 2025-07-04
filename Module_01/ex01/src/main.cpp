@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 15:50:43 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 19:05:51 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/04 16:06:09 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ int	main(void)
 	std::cout << "Creating horde with 10 zombies...\n";
 	horde = zombieHorde(zombies, "z");
 	std::cout << "Destroing horde...\n";
-	for (int i = 0; i < zombies; i++)
-		horde[i].~Zombie();
+	delete[] horde;
 	return (0);
 }
 
@@ -36,7 +35,9 @@ static Zombie	*zombieHorde(int N, std::string name)
 		return (NULL);
 	horde = new Zombie[N];
 	for (int i = 0; i < N; i++)
+	{
 		horde[i].set_name(name);
+		horde[i].announce();
+	}
 	return (horde);
 }
-

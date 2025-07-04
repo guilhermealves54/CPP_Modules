@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 15:51:05 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 19:11:44 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/04 15:41:07 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ZOMBIE_HPP
 
 #include <iostream>
+#include <sstream>
 
 class Zombie
 {

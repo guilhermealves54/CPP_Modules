@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 15:50:40 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 16:05:38 by gribeiro         ###   ########.fr       */
+/*   Created: 2025/07/04 17:45:30 by gribeiro          #+#    #+#             */
+/*   Updated: 2025/07/04 17:46:49 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-Zombie::Zombie()
-{
-}
+#include <iostream>
 
-Zombie::~Zombie()
-{
-	std::cout << zombie_name << " died.\n";
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << zombie_name << ": BraiiiiiiinnnzzzZ...\n";
-}
-
-void	Zombie::set_name(std::string name)
-{
-	static int	n;
-	std::stringstream ss;
-
-	ss << n++;
-	zombie_name = name + ss.str();
-}
+#endif

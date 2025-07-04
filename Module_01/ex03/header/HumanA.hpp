@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 15:50:40 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 16:05:38 by gribeiro         ###   ########.fr       */
+/*   Created: 2025/07/04 17:45:48 by gribeiro          #+#    #+#             */
+/*   Updated: 2025/07/04 17:54:09 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/zombie.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-Zombie::Zombie()
+#include <iostream>
+#include "weapon.hpp"
+
+class HumanA
 {
-}
+    public:
+        HumanA();
+        ~HumanA();
+        void    attack();
+    private:
+        Weapon      Weapon;
+        std::string name;
+};
 
-Zombie::~Zombie()
-{
-	std::cout << zombie_name << " died.\n";
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << zombie_name << ": BraiiiiiiinnnzzzZ...\n";
-}
-
-void	Zombie::set_name(std::string name)
-{
-	static int	n;
-	std::stringstream ss;
-
-	ss << n++;
-	zombie_name = name + ss.str();
-}
+#endif

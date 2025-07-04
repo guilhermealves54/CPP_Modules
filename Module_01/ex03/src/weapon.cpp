@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.cpp                                         :+:      :+:    :+:   */
+/*   weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 15:50:40 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 16:05:38 by gribeiro         ###   ########.fr       */
+/*   Created: 2025/07/04 17:25:30 by gribeiro          #+#    #+#             */
+/*   Updated: 2025/07/04 17:42:50 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/zombie.hpp"
+#include "../header/weapon.hpp"
 
-Zombie::Zombie()
+Weapon::Weapon() 
 {
+	type = "";
 }
 
-Zombie::~Zombie()
+Weapon::~Weapon() {}
+
+void	Weapon::setType(std::string wtype)
 {
-	std::cout << zombie_name << " died.\n";
+	type = wtype;
 }
 
-void	Zombie::announce(void)
+const std::string&	Weapon::getType()
 {
-	std::cout << zombie_name << ": BraiiiiiiinnnzzzZ...\n";
-}
-
-void	Zombie::set_name(std::string name)
-{
-	static int	n;
-	std::stringstream ss;
-
-	ss << n++;
-	zombie_name = name + ss.str();
+	const std::string &wtype = type;
+	return (wtype);
 }
