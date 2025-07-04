@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 19:27:11 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 00:13:15 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/04 19:24:13 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ void	PhoneBook::srch_contact(void)
 	int			index;
 	std::string	cmmd;
 
+	if (filled_contacts == 0)
+	{
+		std::cout << "No contacts registered. Please ADD a contact first.\n";
+		return ;
+	}
 	std::cout
 		<< " | " << std::setw(10) << std::right << "Index"
 		<< " | " << std::setw(10) << "First name"

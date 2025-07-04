@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/04 17:45:48 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 18:40:53 by gribeiro         ###   ########.fr       */
+/*   Created: 2025/07/04 18:11:25 by gribeiro          #+#    #+#             */
+/*   Updated: 2025/07/04 18:44:25 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "../header/HumanA.hpp"
 
-#include <iostream>
-#include "weapon.hpp"
-
-class HumanA
+HumanA::HumanA(std::string H_name, Weapon club)
 {
-    public:
-        HumanA(std::string H_name, Weapon club);
-        ~HumanA();
-        void    attack();
-    private:
-        Weapon      weapon;
-        std::string name;
-};
+    name = H_name;
 
-#endif
+    weapon.setType(w);
+}
+
+HumanA::~HumanA() {}
+
+void    HumanA::attack(void)
+{
+     std::cout << name << " attacks with their " << Weapon.getType() << std::endl;
+}
