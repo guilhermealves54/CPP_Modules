@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 00:38:16 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 13:25:04 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/30 16:11:01 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,7 @@ void	Contact::fill_nickname()
 int	Contact::valid_phone(std::string str)
 {
 	for (size_t i = 0; i < str.length(); i++)
-		if (!std::isdigit(str[i]) && str[i] != '(' && str[i] != ')' 
-			&& str[i] != '+')
+		if (!std::isdigit(str[i]) && str[i] != '+')
 			return (-1);
 	return (0);
 }
