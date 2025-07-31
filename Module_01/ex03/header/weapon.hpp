@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 17:18:01 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 18:32:02 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/07/31 01:30:58 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 class	Weapon
 {
 	public:
-		Weapon();
+		Weapon(const std::string& type);
 		~Weapon();
-		void				setType(Weapon wtype);
-		const std::string&	getType();
+		void				setType(const std::string& type);
+		const std::string&	getType() const;
 	private:
 		std::string			type;
 };
