@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 17:45:30 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 18:24:20 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/08/05 18:41:11 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 
 #include <iostream>
 #include "weapon.hpp"
+
 class HumanB
 {
     public:
         HumanB(std::string H_name);
         ~HumanB();
-        void    attack();
+        void    	attack();
+		void		setWeapon(Weapon &w);
     private:
-        Weapon      Weapon;
+        Weapon      *weapon;
         std::string name;
 };
 

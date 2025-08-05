@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 17:45:48 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/31 01:35:26 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/08/05 18:39:21 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 class HumanA
 {
     public:
-        HumanA(std::string H_name, Weapon &club);
+        HumanA(std::string H_name, Weapon &w);
         ~HumanA();
-        void    attack();
+        void    	attack();
     private:
-        Weapon      weapon;
+        Weapon		&weapon;
         std::string name;
 };
 

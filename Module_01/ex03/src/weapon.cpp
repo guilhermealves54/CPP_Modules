@@ -3,29 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 17:25:30 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 18:31:30 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/08/05 18:32:46 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/weapon.hpp"
 
-Weapon::Weapon() 
-{
-	type = "";
-}
+Weapon::Weapon(const std::string &wtype) : type(wtype) {}
 
 Weapon::~Weapon() {}
 
-void	Weapon::setType(Weapon wtype)
+void	Weapon::setType(const std::string &wtype)
 {
-	type = wtype.getType();
+	type = wtype;
 }
 
-const std::string&	Weapon::getType()
+const std::string	&Weapon::getType() const
 {
-	const std::string &wtype = type;
-	return (wtype);
+	return (type);
 }

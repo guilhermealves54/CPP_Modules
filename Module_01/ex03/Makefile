@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+         #
+#    By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 01:28:52 by gribeiro          #+#    #+#              #
-#    Updated: 2025/07/04 17:17:24 by gribeiro         ###   ########.fr        #
+#    Updated: 2025/08/05 18:30:09 by gribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 #	Files
-SRC			= $(addprefix src/, main.cpp weapon.cpp)
+SRC			= $(addprefix src/, main.cpp weapon.cpp HumanA.cpp HumanB.cpp)
 
 OBJ			= $(SRC:.cpp=.o)
 
