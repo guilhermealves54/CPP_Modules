@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 15:50:40 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 16:05:38 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/08/06 14:51:52 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	Zombie::announce(void)
 
 void	Zombie::set_name(std::string name)
 {
-	static int	n;
-	std::stringstream ss;
+	static int			n;
+	std::stringstream	ss;
 
 	ss << n++;
 	zombie_name = name + ss.str();
