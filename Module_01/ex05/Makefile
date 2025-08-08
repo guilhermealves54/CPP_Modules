@@ -6,18 +6,18 @@
 #    By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 01:28:52 by gribeiro          #+#    #+#              #
-#    Updated: 2025/08/06 13:48:01 by gribeiro         ###   ########.fr        #
+#    Updated: 2025/08/08 12:13:38 by gribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= sed
+NAME		= harl
 
 #	Compiler
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 #	Files
-SRC			= $(addprefix src/, main.cpp)
+SRC			= $(addprefix src/, main.cpp harl.cpp)
 
 OBJ			= $(SRC:.cpp=.o)
 
@@ -31,8 +31,7 @@ $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 test: all
-	@echo "Hello World!" > infile.txt
-	@./sed infile.txt "World" "Duck"
+	@./harl
 
 clean:
 	rm -f $(OBJ)
