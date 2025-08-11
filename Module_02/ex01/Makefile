@@ -6,11 +6,11 @@
 #    By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 01:28:52 by gribeiro          #+#    #+#              #
-#    Updated: 2025/08/11 16:14:14 by gribeiro         ###   ########.fr        #
+#    Updated: 2025/08/11 16:14:23 by gribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ex00
+NAME		= ex01
 
 #	Compiler
 CXX			= c++
@@ -31,7 +31,7 @@ $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 test: all
-	@./ex00
+	@./ex01
 
 clean:
 	rm -f $(OBJ)
