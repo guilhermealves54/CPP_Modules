@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 11:25:50 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/08/08 12:21:18 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:34:25 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void Harl::complain (std::string level)
 	comments["WARNING"] = &Harl::warning;
 	comments["ERROR"] = &Harl::error;
 	std::map<std::string, void (Harl::*)()>::iterator entry = comments.find(level);
+
 	if (entry != comments.end())
 		(this->*(entry->second))();
 	else
