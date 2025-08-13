@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 19:27:11 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 19:24:13 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/08/13 15:34:16 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ void	PhoneBook::srch_contact(void)
 	{
 		std::cout << "Select an index > ";
 		std::getline(std::cin, cmmd);
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			exit (0);
+		}
 		std::stringstream	stream(cmmd);
 		if ((stream >> index) && stream.eof())
 		{

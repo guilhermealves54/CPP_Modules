@@ -12,6 +12,11 @@ int	main(void)
 	{
 		std::cout << "> ";
 		std::getline(std::cin, cmmd);
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			return (0);
+		}
 		if (cmmd == "ADD")
 			PhoneBook.add_contact();
 		else if (cmmd == "SEARCH")

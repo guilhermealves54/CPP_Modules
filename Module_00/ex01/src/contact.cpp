@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gribeiro <gribeiro@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 00:38:16 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/30 16:11:01 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/08/13 15:38:13 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ void	Contact::fill_first_name()
 {
 	std::cout << "First name > ";
 	std::getline(std:: cin, first_name);
+	if (std::cin.eof())
+	{
+		std::cout << std::endl;
+		exit (0);
+	}
 	if (valid_name(first_name) == -1)
 	{
 		std::cout << first_name << " : is not a valid first name\n";
@@ -58,6 +63,11 @@ void	Contact::fill_last_name()
 {
 	std::cout << "Last name > ";
 	std::getline(std:: cin, last_name);
+	if (std::cin.eof())
+	{
+		std::cout << std::endl;
+		exit (0);
+	}
 	if (valid_name(last_name) == -1)
 	{
 		std::cout << first_name << " : is not a valid last name\n";
@@ -69,6 +79,11 @@ void	Contact::fill_nickname()
 {
 	std::cout << "Nickname > ";
 	std::getline(std:: cin, nickname);
+	if (std::cin.eof())
+	{
+		std::cout << std::endl;
+		exit (0);
+	}
 }
 
 int	Contact::valid_phone(std::string str)
@@ -83,6 +98,11 @@ void	Contact::fill_phone_nbr()
 {
 	std::cout << "Phone number > ";
 	std::getline(std:: cin, phone_nbr);
+	if (std::cin.eof())
+	{
+		std::cout << std::endl;
+		exit (0);
+	}
 	if (valid_phone(phone_nbr) == -1)
 	{
 		std::cout << phone_nbr << " : is not a valid phone number\n";
@@ -94,6 +114,11 @@ void	Contact::fill_dark_secrt()
 {
 	std::cout << "Darkest secret > ";
 	std::getline(std:: cin, dark_secrt);
+	if (std::cin.eof())
+	{
+		std::cout << std::endl;
+		exit (0);
+	}
 }
 
 void	Contact::print_full_data(void)
