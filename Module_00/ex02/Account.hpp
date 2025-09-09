@@ -29,12 +29,12 @@ public:
 	static int	getNbWithdrawals( void );
 	static void	displayAccountsInfos( void );
 
-	Account( int initial_deposit ); //constructor abriga a deposito inicial
+	Account( int initial_deposit );
 	~Account( void );
 
 	void	makeDeposit( int deposit );
 	bool	makeWithdrawal( int withdrawal );
-	int		checkAmount( void ) const;	//const no fim - nao pode alterar vars
+	int		checkAmount( void ) const;
 	void	displayStatus( void ) const;
 
 
@@ -53,17 +53,6 @@ private:
 	int				_nbWithdrawals;
 
 	Account( void );
-
 };
 
-
-
-// ************************************************************************** //
-// vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //
-// -*- indent-tabs-mode:t;                                                   -*-
-// -*- mode: c++-mode;                                                       -*-
-// -*- fill-column: 75; comment-column: 75;                                  -*-
-// ************************************************************************** //
-
-
-#endif /* __ACCOUNT_H__ */
+#endif
