@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 15:50:43 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/04 16:06:09 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/10/21 16:07:31 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	int		zombies;
 
 	zombies = 10;
-	std::cout << "Creating horde with 10 zombies...\n";
+	std::cout << "Creating horde with " << zombies << " zombies...\n";
 	horde = zombieHorde(zombies, "z");
 	std::cout << "Destroing horde...\n";
 	delete[] horde;
