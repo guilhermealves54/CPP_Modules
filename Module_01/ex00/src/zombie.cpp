@@ -6,7 +6,7 @@
 /*   By: gribeiro <gribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 15:50:40 by gribeiro          #+#    #+#             */
-/*   Updated: 2025/07/01 16:26:23 by gribeiro         ###   ########.fr       */
+/*   Updated: 2025/10/21 14:55:24 by gribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 Zombie::Zombie(std::string name)
 {
-	zombie_name = name;
+	_zombie_name = name;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << zombie_name << " died.\n";
+	std::cout << _zombie_name << " died.\n";
 }
 
 void    Zombie::announce(void)
 {
-	std::cout << zombie_name << ": BraiiiiiiinnnzzzZ...\n";
+	std::cout << _zombie_name << ": BraiiiiiiinnnzzzZ...\n";
 }
